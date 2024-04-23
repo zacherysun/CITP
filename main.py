@@ -11,6 +11,14 @@ class MyGUI:
         self.label = tkinter.Label(self.main_window, text="Enter a temperature in Celsius")
         self.label.pack()
 
+        #input box
+        self.celsius = tkinter.Entry(self.main_window)
+        self.celsius.pack()
+
+        #button to convert
+        self.button = tkinter.Button(self.main_window, text="Convert to Fahrenheit")
+        self.button.pack()
+
         #Start the main loop
         tkinter.mainloop()
 

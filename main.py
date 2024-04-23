@@ -28,8 +28,11 @@ class MyGUI:
     
     #convert function
     def convert(self):
+        #convert celsius to fahrenheit
         f = (9/5) * float(self.celsius.get()) + 32
-        print(f)
+        #change the output label
+        self.output.config(text=f"{f} degrees Fahrenheit")
+
 
 #Create an instance of the MyGUI class
 if __name__ == '__main__':

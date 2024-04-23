@@ -16,11 +16,20 @@ class MyGUI:
         self.celsius.pack()
 
         #button to convert
-        self.button = tkinter.Button(self.main_window, text="Convert to Fahrenheit")
+        self.button = tkinter.Button(self.main_window, text="Convert to Fahrenheit", command=self.convert)
         self.button.pack()
+
+        #label for output
+        self.output = tkinter.Label(self.main_window, text="")
+        self.output.pack()
 
         #Start the main loop
         tkinter.mainloop()
+    
+    #convert function
+    def convert(self):
+        f = (9/5) * float(self.celsius.get()) + 32
+        print(f)
 
 #Create an instance of the MyGUI class
 if __name__ == '__main__':
